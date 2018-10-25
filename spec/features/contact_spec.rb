@@ -26,7 +26,7 @@ feature Contact do
       fill_in 'contact_googleplus', with: 'http:\\www.google.com'
 
       click_button 'Update Contact'
-
+      page.find('#flash')
       expect(flash)
           .to eq('Contact details were successfully updated.')
       contact.reload
