@@ -64,6 +64,8 @@ GEM
     airbrake-ruby (2.11.0)
     ajax-datatables-rails (0.4.3)
       railties (>= 4.0)
+    archive-zip (0.11.0)
+      io-like (~> 0.3.0)
     arel (7.1.4)
     ast (2.4.0)
     autoprefixer-rails (9.1.4)
@@ -105,10 +107,14 @@ GEM
     chart-js-rails (0.1.6)
       railties (> 3.1)
     chartkick (3.0.1)
+    childprocess (0.9.0)
+      ffi (~> 1.0, >= 1.0.11)
+    chromedriver-helper (2.1.0)
+      archive-zip (~> 0.10)
+      nokogiri (~> 1.8)
     chronic (0.10.2)
     chunky_png (1.3.8)
     climate_control (0.2.0)
-    cliver (0.3.2)
     cloudinary (1.9.1)
       aws_cf_signer
       rest-client
@@ -180,6 +186,8 @@ GEM
       actionpack (>= 3.2.13)
     formtastic-bootstrap (3.1.1)
       formtastic (>= 3.0)
+    geckodriver-helper (0.21.0)
+      archive-zip (~> 0.7)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     gravtastic (3.2.6)
@@ -226,6 +234,7 @@ GEM
     i18n_data (0.8.0)
     inversion (1.1.1)
       loggability (~> 0.12)
+    io-like (0.3.0)
     iso-639 (0.2.8)
     jaro_winkler (1.5.1)
     jquery-datatables-rails (3.4.0)
@@ -333,16 +342,10 @@ GEM
       ast (~> 2.4.0)
     pdf-core (0.2.5)
     pg (1.1.2)
-    phantomjs (2.1.1.0)
     piwik_analytics (1.0.2)
       actionpack
       activesupport
       rails (>= 3.0.0)
-    poltergeist (1.9.0)
-      capybara (~> 2.1)
-      cliver (~> 0.3.1)
-      multi_json (~> 1.0)
-      websocket-driver (>= 0.2.0)
     powerpack (0.1.2)
     prawn (1.0.0)
       pdf-core (~> 0.2.2)
@@ -500,6 +503,9 @@ GEM
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
     selectize-rails (0.12.5)
+    selenium-webdriver (3.14.1)
+      childprocess (~> 0.5)
+      rubyzip (~> 1.2, >= 1.2.2)
     sexp_processor (4.11.0)
     shellany (0.0.1)
     shoulda-matchers (2.8.0)
@@ -599,6 +605,7 @@ DEPENDENCIES
   carrierwave-bombshelter
   chart-js-rails
   chartkick
+  chromedriver-helper
   climate_control
   cloudinary
   cocoon
@@ -618,6 +625,7 @@ DEPENDENCIES
   font-awesome-rails
   formtastic (~> 3.1.5)
   formtastic-bootstrap
+  geckodriver-helper
   gravtastic
   guard-rspec
   haml-rails
@@ -642,9 +650,7 @@ DEPENDENCIES
   omniauth-openid
   paper_trail
   pg
-  phantomjs
   piwik_analytics (~> 1.0.1)
-  poltergeist
   prawn-qrcode (~> 0.2.2.1)
   prawn_rails
   puma (~> 3.0)
@@ -677,6 +683,7 @@ DEPENDENCIES
   ruby-oembed (~> 0.12.0)
   sass-rails (>= 4.0.2)
   selectize-rails
+  selenium-webdriver
   shoulda-matchers
   skylight
   spring-commands-rspec
